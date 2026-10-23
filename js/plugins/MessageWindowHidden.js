@@ -191,6 +191,8 @@
         if (this.hasNameWindow() && !this.nameWindowIsSubWindow()) this.hideSubWindow(this._nameWindow);
         this.linkPictures(0, param.linkPictureNumbers);
         this.linkPictures(255, param.linkShowPictureNumbers);
+        if (typeof Input !== 'undefined') Input.clear();
+        if (typeof TouchInput !== 'undefined') TouchInput.clear();
         this._hideByMessageWindowHidden = true;
     };
 
@@ -202,6 +204,8 @@
         if (this.hasNameWindow() && !this.nameWindowIsSubWindow()) this.showSubWindow(this._nameWindow);
         this.linkPictures(0, param.linkShowPictureNumbers);
         this.linkPictures(255, param.linkPictureNumbers);
+        if (typeof Input !== 'undefined') Input.clear();
+        if (typeof TouchInput !== 'undefined') TouchInput.clear();
         this._hideByMessageWindowHidden = false;
     };
 
